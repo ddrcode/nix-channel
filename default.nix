@@ -1,7 +1,7 @@
 { pkgs ? import <nixpkgs> { } }:
 
 rec {
-  hello = pkgs.writeShellScriptBin "hello-ddr" ''
+  hello-ddr = pkgs.writeShellScriptBin "hello-ddr" ''
     echo "testing ddr channel"
   '';
 }
