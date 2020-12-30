@@ -1,8 +1,12 @@
-{ pkgs ? import <nixpkgs> { } }:
+{ system ? builtins.currentSystem }:
 
-{
-  hello-ddr = pkgs.writeShellScriptBin "hello-ddr" ''
-    echo "testing ddr channel"
-  '';
+let
+  pkgs = import <nixpkgs> { inherit system; };
 
-}
+  callPackage = pkgs.lib.callPackageWith (pkgs // self);
+
+  self = {
+    hello-ddr = callPackage ./packages/hello.nix {};
+  };
+in
+self
