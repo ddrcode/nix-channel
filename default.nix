@@ -7,6 +7,7 @@ let
 
   self = {
     hello-ddr = callPackage ./packages/hello.nix {};
+    glrnvim = callPackage ./packages/glrnvim.nix {};
   };
 in
 self
