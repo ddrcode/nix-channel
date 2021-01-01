@@ -9,5 +9,12 @@ let
     hello-ddr = callPackage ./packages/hello.nix {};
     glrnvim = callPackage ./packages/glrnvim.nix {};
   };
+
+  nodePackages = callPackage ./node-packages/node-packages.nix {
+    nodeEnv = callPackage ./node-packages/node-env.nix {};
+  };
+
+  # self = packages // nodePackages;
+
 in
-self
+  self // nodePackages
