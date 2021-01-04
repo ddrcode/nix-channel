@@ -2,14 +2,14 @@
 
 rustPlatform.buildRustPackage rec {
   name = "glrnvim";
-  version = "v1.1.2";
+  version = "v1.1.1";
 
   src = fetchFromGitHub {
-    owner = "ddrcode";
+    owner = "beeender";
     repo = "glrnvim";
     rev = "${version}";
-    sha256 = "17wbf4pm32kpi2nbphaq3vbhr13alxirwxhpjk7vgvhpnkww1kxn";
+    sha256 = "1ibwk85y5pa312q8p20gfsybx0q3hn3brhjws9vn7y74clv2s9lb";
   };
 
-  cargoSha256 = "0bqvd52nf986vnhj0hjjmw0s53i1rin1ng6xprggwvfcq4y50hzm";
+  cargoSha256 = "1nahnsnl51yy6hy6jw1bsbriw7irgbq8j9h8nlrgw1c0s6wz84hm";
 }
