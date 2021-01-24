@@ -8,6 +8,7 @@ let
   self = {
     hello-ddr = callPackage ./packages/hello.nix {};
     glrnvim = callPackage ./packages/glrnvim.nix {};
+    vimPlugins = callPackage ./packages/vim-plugins.nix {};
   };
 
   nodePackages = callPackage ./node-packages/node-packages.nix {
